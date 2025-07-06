@@ -1,0 +1,338 @@
+{
+  "header": {
+    "title": "Ajay Kumar Yadav",
+    "navigation": [
+      { "label": "Home", "url": "#home" },
+      { "label": "About", "url": "#about" },
+      { "label": "Projects", "url": "#projects" },
+      { "label": "Contact", "url": "#contact" }
+    ]
+  },
+  "personal": {
+    "name": "Ajay Kumar Yadav",
+    "profession": "Software Developer",
+    "bio": "I'm a passionate software developer with a strong interest in web development, full-stack applications, and creating impactful solutions in education and fitness technology. Currently pursuing a B.Tech in Computer Science & Engineering, I'm eager to leverage my skills in React, Node.js, and Django to build innovative projects.",
+    "interests": ["Web Development", "Full-Stack Development", "Education Technology", "Fitness Technology", "Data Visualization"],
+    "social": {
+      "github": {
+        "url": "https://github.com/GitAjayYadavHub",
+        "icon": "fa-github"
+      },
+        "linkedin": {
+        "url": "https://www.linkedin.com/in/ajay-kumar-yadav-a41715282",
+        "icon": "fa-linkedin"
+      },
+      "leetcode": {
+        "url": "https://leetcode.com/u/LeetAjayyadavcode",
+        "icon": "fa-code"
+      },
+      "codolio": {
+        "url": "https://codolio.com/profile/AjayYadavCodolio",
+        "icon": "fa-briefcase"
+      }
+    },
+    "profilePicture": "Ajay.png"
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Computer Science & Engineering",
+      "institution": "Ajay Kumar Garg Engineering College",
+      "location": "Ghaziabad, Uttar Pradesh",
+      "dates": "2022 - 2026",
+      "cgpa": "7.8"
+    },
+    {
+      "degree": "Class XII",
+      "College": "Saraswati Vidya Mandir Inter College",
+      "location": "Saharanpur, Uttar Pradesh",
+      "dates": "2018 - 2020",
+      "percentage": "78%"
+    },
+    {
+      "degree": "Class X",
+      "College": "Satyug Asharm Model Inter College",
+      "location": "Saharanpur, Uttar Pradesh",
+      "dates": "2016 - 2018",
+      "percentage": "89%"
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Software Development Engineering Intern",
+      "company": "Bluestock Fintech",
+      "location": "Remote",
+      "dates": "July 2025",
+      "duration": "4 weeks",
+      "description": "Gained hands-on experience in web technologies including Frontend (HTML, CSS, JavaScript, Bootstrap 5), Backend (Python, Django, Django REST Framework, PostgreSQL), and Tools (Postman, Git & GitHub, Visual Studio Code). Developed features such as Comprehensive IPO Display, Search and Filter, Admin Panel, REST API, User Authentication, and other static and dynamic responsive features."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        { "name": "C++", "percentage": 70, "icon": "fa-c" },
+        { "name": "Java", "percentage": 75, "icon": "fa-c-plusplus" },
+        { "name": "JavaScript", "percentage": 80, "icon": "fa-js" },
+        { "name": "Python", "percentage": 75, "icon": "fa-python" }
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        { "name": "MongoDB", "percentage": 75, "icon": "fa-database" },
+        { "name": "MySQL", "percentage": 70, "icon": "fa-database" },
+        { "name": "PostgreSQL", "percentage": 70, "icon": "fa-database" }
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        { "name": "Node.js", "percentage": 80, "icon": "fa-node-js" },
+        { "name": "Express.js", "percentage": 70, "icon": "fa-server" },
+        { "name": "React.js", "percentage": 85, "icon": "fa-react" },
+        { "name": "Tailwind CSS", "percentage": 80, "icon": "fa-css3" },
+        { "name": "Bootstrap", "percentage": 75, "icon": "fa-bootstrap" },
+        { "name": "Redux", "percentage": 75, "icon": "fa-exchange-alt" },
+        { "name": "Framer-Motion", "percentage": 70, "icon": "fa-film" },
+        { "name": "Django", "percentage": 75, "icon": "fa-python" },
+        { "name": "Django REST Framework", "percentage": 70, "icon": "fa-python" }
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        { "name": "Git", "percentage": 75, "icon": "fa-git" },
+        { "name": "GitHub", "percentage": 75, "icon": "fa-github" },
+        { "name": "VSCode", "percentage": 80, "icon": "fa-code" },
+        { "name": "Cursor AI", "percentage": 60, "icon": "fa-robot" },
+        { "name": "Figma", "percentage": 70, "icon": "fa-figma" },
+        { "name": "Postman", "percentage": 75, "icon": "fa-paper-plane" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Duolingo MVP Dashboard",
+      "description": "Developed a full-stack dashboard to track and visualize key performance metrics for a Duolingo Minimum Viable Product (MVP), including user activity, lesson completion, streaks, and downloads. The project involved product teardown, feature prioritization using RICE and KANO models, defining the MVP feature set, developing a GTM strategy, and setting success metrics.",
+      "technologies": [
+        { "name": "React", "icon": "fa-react", "logo": "https://reactjs.org/logo-og.png" },
+        { "name": "Node.js", "icon": "fa-node-js", "logo": "https://nodejs.org/static/images/logo.svg" },
+        { "name": "Express.js", "icon": "fa-server", "logo": null },
+        { "name": "MongoDB", "icon": "fa-database", "logo": "https://www.mongodb.com/assets/images/global/leaf.png" },
+        { "name": "Chart.js", "icon": "fa-chart-bar", "logo": "https://www.chartjs.org/img/chartjs-logo.svg" }
+      ],
+      "features": [
+        "Live metrics dashboard with real-time updates",
+        "30-day trend analysis for key metrics",
+        "User progress tracking",
+        "Gamification elements visualization (streaks, XP)",
+        "Download trend monitoring"
+      ],
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "images": [
+        "duolingo_screenshot1.png",
+        "duolingo_screenshot2.png"
+      ],
+      "project_details": {
+        "product_teardown": "Documented all current features of Duolingo, including learning features (e.g., lessons, spaced repetition), gamification (e.g., streaks, XP), social features (e.g., clubs), and subscription offerings (e.g., Super Duolingo, Duolingo Max).",
+        "feature_prioritization": "Prioritized features for the MVP using RICE (Reach, Impact, Confidence, Effort) and KANO (Must-be, Performance, Attractive) models, selecting User Accounts, Basic Lessons for 2-3 languages, Course Structure, Progress Tracking, Gamification (Streaks, XP), and Simplified Spaced Repetition, considering a bootstrapped budget.",
+        "gtm_strategy": "Developed a go-to-market strategy focused on viral growth through referral programs and social sharing, and community building via in-app forums and user-generated content, targeting young adults aged 18-35 interested in language learning.",
+        "success_metrics": "Defined key metrics including downloads (50,000 in 3 months), daily active users (5,000 by month-end), retention (40% day 1, 20% day 7), average lessons completed (20 per user in first month), and app store rating (4.0 or higher)."
+      }
+    },
+    {
+      "title": "PCM_ChapterWise_Question",
+      "description": "A web application designed to help students practice chapter-wise questions in Physics, Chemistry, and Mathematics. It features categorized question banks and progress tracking, built with a user-friendly interface.",
+      "technologies49": [
+        { "name": "React.js", "icon": "fa-react", "logo": "https://reactjs.org/logo-og.png" },
+        { "name": "Tailwind CSS", "icon": "fa-css3", "logo": "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" },
+        { "name": "HTML", "icon": "fa-html5", "logo": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" },
+        { "name": "CSS", "icon": "fa-css3", "logo": "https://www.w3.org/Style/CSS/Overview.en.html" },
+        { "name": "JavaScript", "icon": "fa-js", "logo": "https://www.javascript.com/images/js-logo.png" }
+      ],
+      "features": [
+        "Categorized question banks for PCM subjects",
+        "Progress tracking for each chapter",
+        "Responsive and intuitive user interface"
+      ],
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "images": [
+        "pcm_screenshot1.png",
+        "pcm_screenshot2.png"
+      ],
+      "project_details": {
+        "product_teardown": null,
+        "feature_prioritization": null,
+        "gtm_strategy": null,
+        "success_metrics": null
+      }
+    },
+    {
+      "title": "Modern-Fitness-Exercises-App",
+      "description": "A full-stack web application providing a comprehensive database of exercises categorized by muscle group, equipment, and difficulty. Users can search for exercises, view detailed instructions, watch workout videos, and track their fitness progress.",
+      "technologies": [
+        { "name": "MongoDB", "icon": "fa-database", "logo": "https://www.mongodb.com/assets/images/global/leaf.png" },
+        { "name": "Express.js", "icon": "fa-server", "logo": null },
+        { "name": "React.js", "icon": "fa-react", "logo": "https://reactjs.org/logo-og.png" },
+        { "name": "Node.js", "icon": "fa-node-js", "logo": "https://nodejs.org/static/images/logo.svg" },
+        { "name": "Tailwind CSS", "icon": "fa-css3", "logo": "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" }
+      ],
+      "features": [
+        "Search exercises by muscle group, equipment, and difficulty",
+        "View detailed exercise instructions and benefits",
+        "Watch related workout videos",
+        "Discover similar exercises",
+        "Track fitness progress with a user-friendly interface"
+      ],
+      "links": {
+        "github": null,
+        "demo": null
+      },
+      "images": [
+        "fitness_screenshot1.png",
+        "fitness_screenshot2.png"
+      ],
+      "project_details": {
+        "product_teardown": null,
+        "feature_prioritization": null,
+        "gtm_strategy": null,
+        "success_metrics": null
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Developer and Technology Job Simulation",
+      "issuer": "Accenture",
+      "link": "https://www.theforage.com/virtual-internships/7N8hQ4Gnsb7rZxWLE/Technology%20Program"
+    },
+    {
+      "title": "AWS APAC Solutions Architecture",
+      "issuer": "AWS",
+      "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate"
+    },
+    {
+      "title": "Full Stack Development with PHP & MySQL",
+      "issuer": "E & ICT Academy, IIT Kanpur",
+      "link": "https://ict.iitk.ac.in/product/full-stack-development-with-php-mysql"
+    },
+    {
+      "title": "Machine Learning with MATLAB",
+      "issuer": "Infosys Springboard",
+      "link": "https://infyspringboard.onwingspan.com"
+    }
+  ],
+  "achievements": [
+    {
+      "description": "Solved 100+ Questions on Leetcode",
+      "icon": "fa-code"
+    },
+    {
+      "description": "Attended 4-Week Immersive Bootcamp on Product Management by E-Cell, IIT Guwahati",
+      "icon": "fa-graduation-cap"
+    },
+    {
+      "description": "Completed 30 Days DSA Bootcamp in C++ on Unstop Platform",
+      "icon": "fa-laptop-code"
+    }
+  ],
+  "footer": {
+    "contact": {
+      "email": {
+        "value": "Ajayyadav0653987@gmail.com",
+        "icon": "fa-envelope"
+      },
+      "phone": {
+        "value": "+91 8126783617",
+        "icon": "fa-phone"
+      },
+      "address": {
+        "value": "Ghaziabad, Uttar Pradesh, 201015",
+        "icon": "fa-map-marker"
+      }
+    },
+    "social": {
+      "github": {
+        "url": "https://github.com/GitAjayYadavHub",
+        "icon": "fa-github"
+      },
+        "linkedin": {
+        "url": "https://www.linkedin.com/in/ajay-kumar-yadav-a41715282",
+        "icon": "fa-linkedin"
+      }
+    },
+  "feedback": {
+    "message": "Have feedback? Let's chat!",
+      "email": {
+        "value": "Ajayyadav0653987@gmail.com",
+        "icon": "fa-comment",
+        "utm": "utm_source=profile&utm_medium=footer&utm_campaign=email",
+        "footer": {
+          "elmType": "div",
+          "style": {
+            "padding": "12px",
+            "border-top": "1px solid #ccc",
+            "display": "flex",
+            "gap": "8px",
+            "align-items": "center"
+          },
+          "children": [
+            {
+              "elmType": "input",
+              "attributes": {
+                "type": "email",
+                "placeholder": "Your email",
+                "name": "userEmail"
+              },
+              "style": {
+                "flex": "1",
+                "padding": "6px"
+              }
+            },
+            {
+              "elmType": "input",
+              "attributes": {
+                "type": "text",
+                "placeholder": "Your feedback",
+                "name": "userFeedback"
+              },
+              "style": {
+                "flex": "2",
+                "padding": "6px"
+              }
+            },
+            {
+              "elmType": "a",
+              "attributes": {
+                "href": {
+                  "operator": "+",
+                  "operands": [
+                    "\"mailto:Ajayyadav0653987@gmail.com?subject=Feedback+from+\"+",
+                    "[$userEmail]",
+                    "+\"&body=\"+encodeURIComponent([$userFeedback])"
+                  ]
+                },
+                "txtContent": "Send Feedback",
+                "target": "_blank"
+              },
+              "style": {
+                "padding": "6px 12px",
+                "background-color": "#0078d4",
+                "color": "#fff",
+                "border-radius": "4px",
+                "text-decoration": "none"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "copyright": "© 2025 AJAY KUMAR YADAV. All rights reserved."
+  }
+}
