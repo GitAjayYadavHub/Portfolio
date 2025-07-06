@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-gray-300 hover:text-white transition-colors duration-300;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #00ff41;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  
+  .code-block {
+    @apply bg-gray-900/50 border border-gray-700 rounded-lg p-6 font-mono text-sm backdrop-blur-sm;
+  }
+  
+  .tech-tag {
+    @apply inline-block px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium;
+  }
+  
+  .project-card {
+    @apply bg-gray-900/50 border border-gray-700 rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10;
+  }
+  
+  .skill-bar {
+    @apply w-full bg-gray-700 rounded-full h-2 overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-primary to-green-400 rounded-full transition-all duration-1000 ease-out;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc33;
+}
+
+/* Typing animation */
+.typing-text {
+  overflow: hidden;
+  border-right: 2px solid #00ff41;
+  white-space: nowrap;
+  animation: typewriter 3s steps(40) 1s 1 normal both, blink 1s infinite;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #00ffff;
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% {
+    transform: translate(0);
+  }
+  15%, 49% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 20%, 21%, 62%, 63%, 99%, 100% {
+    transform: translate(0);
+  }
+  21%, 62% {
+    transform: translate(2px, -2px);
+  }
+}
