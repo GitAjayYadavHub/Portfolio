@@ -141,6 +141,8 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => window.open('https://github.com/GitAjayYadavHub', '_blank')}
+                    aria-label={`View ${project.title} source code`}
                     className="flex items-center space-x-2 px-4 py-2 bg-primary text-dark font-medium rounded-lg hover:bg-primary/90 transition-colors"
                   >
                     <Github size={16} />
@@ -149,6 +151,8 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => window.open('#', '_blank')}
+                    aria-label={`View ${project.title} live demo`}
                     className="flex items-center space-x-2 px-4 py-2 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-dark transition-all"
                   >
                     <ExternalLink size={16} />

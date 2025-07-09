@@ -19,9 +19,9 @@ const Hero = () => {
   }, [currentIndex, fullText]);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/GitAjayYadavHub', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:ajayyadav0653987@gmail.com', label: 'Email' },
+    { icon: Github, href: 'https://github.com/GitAjayYadavHub', label: 'GitHub', external: true },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', label: 'LinkedIn', external: true },
+    { icon: Mail, href: 'mailto:ajayyadav0653987@gmail.com', label: 'Email', external: false },
   ];
 
   return (
@@ -155,6 +155,8 @@ const Hero = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={link.label}
+                rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-full hover:bg-primary hover:text-dark transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -175,6 +177,7 @@ const Hero = () => {
           >
             <button
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
+              aria-label="View my projects"
               className="px-8 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
             >
               View My Work
