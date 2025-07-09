@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, MapPin, Clock } from 'lucide-react';
+import profileImage from '../assets/AjayPicture.jpg';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -47,13 +48,41 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
+          {/* Profile Picture */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="relative">
+              <motion.div
+                className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl"
+                whileHover={{ scale: 1.05, borderColor: 'rgba(0, 255, 65, 0.6)' }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={profileImage}
+                  alt="Ajay Kumar Yadav"
+                  className="w-full h-full object-cover object-center"
+                />
+              </motion.div>
+              {/* Animated ring around profile picture */}
+              <motion.div
+                className="absolute inset-0 rounded-full border-2 border-primary/20"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+            </div>
+          </motion.div>
+
           {/* Main Heading */}
           <div className="space-y-4">
             <motion.h1
               className="text-4xl md:text-6xl lg:text-7xl font-bold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.5 }}
             >
               <span className="text-white">{displayText}</span>
               <span className="text-primary animate-blink">|</span>
@@ -63,7 +92,7 @@ const Hero = () => {
               className="text-xl md:text-2xl text-gray-300 font-light"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 1.2 }}
             >
               Software Developer | Full-Stack & ML Enthusiast
             </motion.p>
@@ -74,7 +103,7 @@ const Hero = () => {
             className="max-w-2xl mx-auto code-block text-left"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
+            transition={{ delay: 1.7, duration: 0.5 }}
           >
             <div className="text-primary mb-2">// About me</div>
             <div className="text-gray-300">
@@ -101,7 +130,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 2.2 }}
           >
             <div className="flex items-center space-x-2">
               <MapPin size={16} />
@@ -118,7 +147,7 @@ const Hero = () => {
             className="flex justify-center space-x-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.2 }}
+            transition={{ delay: 2.4 }}
           >
             {socialLinks.map((link, index) => (
               <motion.a
@@ -131,7 +160,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.4 + index * 0.1 }}
+                transition={{ delay: 2.6 + index * 0.1 }}
               >
                 <link.icon size={20} />
               </motion.a>
@@ -142,7 +171,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.8 }}
+            transition={{ delay: 3.0 }}
           >
             <button
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}

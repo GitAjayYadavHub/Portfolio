@@ -36,7 +36,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold text-primary font-mono mb-4">
-                &lt;AjayYadav /&gt;
+                Ajay Yadav
               </h3>
               <p className="text-gray-400 mb-6 max-w-md">
                 Creating digital experiences that matter. Passionate about building 

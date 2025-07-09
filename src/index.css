@@ -55,6 +55,15 @@
   .skill-progress {
     @apply h-full bg-gradient-to-r from-primary to-green-400 rounded-full transition-all duration-1000 ease-out;
   }
+  
+  .profile-image {
+    @apply w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full object-cover object-center border-4 border-primary/30 shadow-2xl transition-all duration-300;
+  }
+  
+  .profile-image:hover {
+    @apply border-primary/60 shadow-primary/20;
+    transform: scale(1.05);
+  }
 }
 
 /* Custom scrollbar */
@@ -126,4 +135,18 @@
   21%, 62% {
     transform: translate(2px, -2px);
   }
+}
+
+/* Profile picture animations */
+@keyframes profileGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.5), 0 0 40px rgba(0, 255, 65, 0.3);
+  }
+}
+
+.profile-glow {
+  animation: profileGlow 3s ease-in-out infinite;
 }

@@ -37,7 +37,7 @@ const Navigation = ({ activeSection }) => {
             className="text-xl font-bold text-primary font-mono"
             whileHover={{ scale: 1.05 }}
           >
-            &lt;AjayYadav /&gt;
+            Ajay Yadav
           </motion.div>
 
           {/* Desktop Navigation */}
