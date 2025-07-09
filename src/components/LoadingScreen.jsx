@@ -16,7 +16,7 @@ const LoadingScreen = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
-          <span className="typing-text">Initializing portfolio...<break>All Power Is Within You <break /> <pre>You Can Do Everything And Anything.</pre></span>
+          <span className="typing-text">Initializing portfolio...<br />All Power Is Within You <br /> <pre>You Can Do Everything And Anything.</pre></span>
         </motion.div>
         
         <motion.div
