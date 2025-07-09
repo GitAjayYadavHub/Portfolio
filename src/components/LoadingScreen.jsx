@@ -14,9 +14,9 @@ const LoadingScreen = () => {
           className="text-primary font-mono text-xl mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2 }}
         >
-          <span className="typing-text">Initializing portfolio...</span>
+          <span className="typing-text">Initializing portfolio...<break>All Power Is Within You <break /> <pre>You Can Do Everything And Anything.</pre></span>
         </motion.div>
         
         <motion.div
