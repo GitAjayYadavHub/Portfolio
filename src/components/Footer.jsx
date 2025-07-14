@@ -14,7 +14,8 @@ const Footer = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Certificates', href: '#certificates' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Contact', href: '#contact' },
+    { name: 'View My Work', href: 'https://github.com/GitAjayYadavHub' }
   ];
 
   const socialLinks = [
@@ -49,6 +50,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit Ajay's ${social.label}`}
                     className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -81,7 +83,11 @@ const Footer = () => {
                       className="text-gray-400 hover:text-primary transition-colors duration-300"
                       onClick={(e) => {
                         e.preventDefault();
-                        document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                        if (link.href.startsWith('#')) {
+                          document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.open(link.href, '_blank', 'noopener,noreferrer');
+                        }
                       }}
                     >
                       {link.name}
