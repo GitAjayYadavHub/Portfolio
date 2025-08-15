@@ -19,9 +19,24 @@ const Hero = () => {
   }, [currentIndex, fullText]);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/GitAjayYadavHub', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:ajayyadav0653987@gmail.com', label: 'Email' },
+    { 
+      icon: Github, 
+      href: 'https://github.com/GitAjayYadavHub', 
+      label: 'GitHub',
+      external: true 
+    },
+    { 
+      icon: Linkedin, 
+      href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', 
+      label: 'LinkedIn',
+      external: true 
+    },
+    { 
+      icon: Mail, 
+      href: 'mailto:ajayyadav0653987@gmail.com', 
+      label: 'Email',
+      external: false 
+    },
   ];
 
   const handleViewWork = () => {
@@ -160,8 +175,8 @@ const Hero = () => {
               <motion.a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.external ? "_blank" : "_self"}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 aria-label={link.label}
                 className="p-3 bg-gray-800 rounded-full hover:bg-primary hover:text-dark transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -169,6 +184,14 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.6 + index * 0.1 }}
+                onClick={(e) => {
+                  // Ensure the link works properly
+                  if (link.href.startsWith('mailto:')) {
+                    window.location.href = link.href;
+                  } else if (link.external) {
+                    window.open(link.href, '_blank', 'noopener,noreferrer');
+                  }
+                }}
               >
                 <link.icon size={20} />
               </motion.a>
@@ -184,9 +207,15 @@ const Hero = () => {
             <motion.button
               onClick={handleViewWork}
               aria-label="View my projects"
-              className="px-8 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+              className="px-8 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              style={{ 
+                background: '#00ff41',
+                color: '#0a0a0a',
+                border: 'none',
+                outline: 'none'
+              }}
             >
               View My Work
             </motion.button>
