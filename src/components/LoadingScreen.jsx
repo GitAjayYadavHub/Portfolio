@@ -14,9 +14,9 @@ const LoadingScreen = () => {
           className="text-primary font-mono text-xl mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 2.5 }}
         >
-          <span className="typing-text"><h1>Train Your Mind To Stay Strong</h1> <br /> <h2>Because Fear Is Natural But Quitting Is A Choice. </h2></span>
+          <span className="typing-text"><h1> Fear Is Natural But Quitting Is A Choice</h1><h2>So Train Your Mind To Stay Strong. </h2></span>
         </motion.div>
         
         <motion.div
