@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: 'DuoInsights – Learning Insights & Performance Metrics',
       tagline: 'Turning Learning Data into Insights.',
-      category: 'Data / Visualization',
+      category: 'Data analysis / Visualisation',
       description:
         'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
       technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Shadcn UI'],
@@ -53,7 +53,7 @@ const Projects = () => {
         'Shared canvases that sync instantly',
         'Smooth interactions for ideation sessions'
       ],
-      impact: 'Enables seamless real-time collaborative drawing for brainstorming and learning, visualizing and teaching sessions.',
+      impact: 'Enables seamless real-time collaborative drawing for brainstorming and Learning and teaching sessions.',
       image: DrawSyncImage,
       codeUrl: 'https://github.com/GitAjayYadavHub/DrawSync',
       liveUrl: 'https://collabydraw-web.vercel.app/'
