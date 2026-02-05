@@ -57,12 +57,12 @@ const Footer = () => {
                 <img
                   src={Logo}
                   alt="Ajay Yadav"
-                  className="h-10 w-10 rounded-full object-cover"
+                  className="h-12 w-12 rounded-full object-cover"
                 />
-                <span className="mt-2 text-xl font-bold text-primary font-mono text-center">Ajay Yadav</span>
+                {/* <span className="mt-1 text-xl font-bold text-primary font-mono">Ajay Yadav</span> */}
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
-                Creating digital experiences that matter. Passionate about building 
+                Passionate about building,
                 impactful solutions through clean code and innovative thinking.
               </p>
               <div className="flex space-x-4">
@@ -142,9 +142,9 @@ const Footer = () => {
           className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <div className="flex items-center text-gray-400 mb-4 md:mb-0">
-            <span>© 2025 Ajay Kumar Yadav. Made with</span>
+            <span>© 2026 Ajay Kumar Yadav. Made with</span>
             <Heart className="text-red-500 mx-2" size={16} />
-            <span>and lots of coffee</span>
+            <span>and thanks for your interest.</span>
           </div>
 
           {/* Back to Top Button */}
