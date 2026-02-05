@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, BarChart } from 'lucide-react';
 import DuoInsightsImage from '../assets/DuoInsights.jpg';
 import CareTrixImage from '../assets/CareTrix.png';
 import DrawSyncImage from '../assets/DrawSync.jpg';
@@ -13,13 +13,13 @@ const Projects = () => {
       category: 'Data / Visualization',
       description:
         'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
-      technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Netlify'],
+      technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Shadcn UI'],
       features: [
         'User progress analysis & lesson completion trends',
         'Learning streak visualization and performance comparison charts',
         'Interactive dashboards with data-driven views'
       ],
-      impact: 'Made user learning trends explorable at a glance, speeding insight discovery for stakeholders.',
+      impact: 'Transforms DuoInsights learning data into interactive dashboards revealing engagement trends and performance insights.',
       image: DuoInsightsImage,
       codeUrl: 'https://github.com/GitAjayYadavHub/Duolingo-Analysis-Dashboard',
       liveUrl: 'https://duolingo-mvp-plan-analysis.netlify.app/'
@@ -27,16 +27,16 @@ const Projects = () => {
     {
       title: 'CareTrix',
       tagline: 'Smart Healthcare Management Platform',
-      category: 'Full-Stack',
+      category: 'MERN Stack',
       description:
         'CareTrix is a healthcare management web application designed to simplify hospital operations. It allows efficient management of patients, doctors, and appointments through a centralized and user-friendly dashboard. The platform focuses on improving workflow efficiency, reducing manual effort, and enhancing the overall healthcare experience.',
-      technologies: ['React', 'Tailwind CSS', 'Render'],
+      technologies: ['React', 'Tailwind CSS', 'Express', 'Node.js', 'MongoDB', 'Socket.io'],
       features: [
         'Patient and staff views with organized workflows',
         'Responsive UI for admin and operator use',
         'Fast navigation with clear action affordances'
       ],
-      impact: 'Improved task clarity and reduced navigation friction for hospital operators.',
+      impact: 'Streamlines hospital operations through centralized patient, doctor, and appointment management dashboards, improving patient care and reducing administrative burden.',
       image: CareTrixImage,
       codeUrl: 'https://github.com/GitAjayYadavHub/CareTrix',
       liveUrl: 'https://hospitrix-frontend.onrender.com/'
@@ -44,16 +44,16 @@ const Projects = () => {
     {
       title: 'DrawSync – Live Collaborative Whiteboard',
       tagline: 'Stay in Sync. Draw in Real Time.',
-      category: 'Collaboration',
+      category: 'Digital learning',
       description:
         'DrawSync is a real-time collaborative drawing application that enables multiple users to draw together on a shared canvas. It is built to support brainstorming, teaching, and team collaboration by providing a smooth, interactive, and easy-to-use drawing experience directly in the browser.',
-      technologies: ['React', 'WebSockets', 'Tailwind CSS', 'Vercel'],
+      technologies: ['React', 'WebSockets', 'Tailwind CSS', 'Canvas', 'BarChart', 'Chart.js'],
       features: [
         'Live multi-user drawing and cursor presence',
         'Shared canvases that sync instantly',
         'Smooth interactions for ideation sessions'
       ],
-      impact: 'Enabled teams to co-create visuals in real time, cutting iteration cycles during workshops.',
+      impact: 'Enables seamless real-time collaborative drawing for brainstorming and learning, visualizing and teaching sessions.',
       image: DrawSyncImage,
       codeUrl: 'https://github.com/GitAjayYadavHub/DrawSync',
       liveUrl: 'https://collabydraw-web.vercel.app/'
@@ -118,7 +118,6 @@ const Projects = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
                   <p className="text-primary text-sm mb-2">{project.tagline}</p>
-                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
                   <div className="text-green-300 bg-green-500/10 border border-green-500/20 rounded-md px-3 py-2 transition-colors duration-300 hover:bg-primary/10 hover:border-primary/30">
                     <span className="text-gray-300 font-semibold">Impact:</span> {project.impact}
                   </div>
