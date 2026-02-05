@@ -147,8 +147,24 @@ const Projects = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
                   <p className="text-primary text-sm mb-2">{project.tagline}</p>
+                  {/* <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                  <p className="text-green-400 text-sm mt-3 font-medium">Impact: {project.impact}</p> */}
                   <p className="text-gray-300 leading-relaxed">{project.description}</p>
                   <p className="text-green-400 text-sm mt-3 font-medium">Impact: {project.impact}</p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span>
+                        <span className="text-gray-400 font-semibold">Summary:</span> {project.description}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span className="text-green-400">
+                        <span className="text-gray-400 font-semibold">Impact:</span> {project.impact}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
 
                 <div>
