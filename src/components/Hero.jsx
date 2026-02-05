@@ -112,7 +112,7 @@ const Hero = () => {
               </motion.h1>
               
               <motion.p
-                className="text-xl md:text-2xl text-gray-300 font-light"
+                className="text-xl md:text-2xl text-gray-300 font-light font-mono tracking-wide leading-relaxed hover:text-primary/90 transition-colors"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
