@@ -7,14 +7,14 @@ const LoadingScreen = () => {
       className="fixed inset-0 bg-dark flex items-center justify-center z-50"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 4.5 }}
     >
       <div className="text-center">
         <motion.div
           className="text-primary font-mono text-xl mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2.5 }}
+          transition={{ duration: 4.5 }}
         >
           <span className="typing-text"><h1> Fear Is Natural But Quitting Is A Choice</h1><h2>So Train Your Mind To Stay Strong. </h2></span>
         </motion.div>
