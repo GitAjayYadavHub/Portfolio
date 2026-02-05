@@ -35,15 +35,15 @@ const Navigation = ({ activeSection }) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div
-            className="flex flex-col items-center"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
             <img
               src={Logo}
               alt="Ajay Yadav"
-              className="h-10 w-10 rounded-full object-cover"
+              className="h-12 w-12 rounded-full object-cover"
             />
-            <span className="mt-2 text-xl font-bold text-primary font-mono text-center">Ajay Yadav</span>
+            <span className="ml-3 text-xl font-bold text-primary font-mono">Ajay Yadav</span>
           </motion.div>
 
           {/* Desktop Navigation */}
