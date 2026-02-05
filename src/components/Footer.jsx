@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import Logo from '../assets/Logo.gif';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -52,9 +53,14 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-primary font-mono mb-4">
-                Ajay Yadav
-              </h3>
+              <div className="flex flex-col items-center mb-4">
+                <img
+                  src={Logo}
+                  alt="Ajay Yadav"
+                  className="h-10 w-10 rounded-full object-cover"
+                />
+                <span className="mt-2 text-xl font-bold text-primary font-mono text-center">Ajay Yadav</span>
+              </div>
               <p className="text-gray-400 mb-6 max-w-md">
                 Creating digital experiences that matter. Passionate about building 
                 impactful solutions through clean code and innovative thinking.
