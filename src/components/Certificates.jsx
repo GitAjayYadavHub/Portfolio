@@ -1,6 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, ExternalLink, Calendar } from 'lucide-react';
+import developerJobSim from '../Certificates/developer-job-sim.pdf';
+import awsApac from '../Certificates/aws-apac.pdf';
+import fullStackPhp from '../Certificates/full-stack-php.pdf';
+import mlMatlab from '../Certificates/ml-matlab.pdf';
+import iitProductSpace from '../Certificates/IIT_product space.pdf';
+import simpliLearn from '../Certificates/SimpliLearn.pdf';
 
 const Certificates = () => {
   const certificates = [
@@ -8,33 +14,49 @@ const Certificates = () => {
       title: 'Developer and Technology Job Simulation',
       issuer: 'Accenture',
       date: 'June 2025',
-      description: 'Completed comprehensive simulation covering software development practices and technology implementation strategies.',
+      description: 'Gained exposure to the software development lifecycle (SDLC), Agile and Waterfall methodologies, and software testing lifecycle (STLC).',
       category: 'Professional Development',
-      url: 'https://drive.google.com/file/d/18-k1OK66LwgPObGyzSs5z3inkLGo3nxR/view?usp=drive_link'
+      url: developerJobSim
     },
     {
       title: 'AWS APAC Solutions Architecture',
       issuer: 'Amazon Web Services',
       date: 'May 2025',
-      description: 'Gained expertise in designing and implementing scalable cloud architectures on AWS platform.',
+      description: 'Developed foundational understanding of AWS solutions architecture concepts, scalability, and system reliability on AWS platform.',
       category: 'Cloud Computing',
-      url: 'https://drive.google.com/file/d/1CNZxjMiLsCIM2496xLDEWDgUiQaeDuzN/view?usp=drive_link'
+      url: awsApac
     },
     {
       title: 'Full Stack Development with PHP & MySQL',
       issuer: 'E & ICT Academy, IIT Kanpur',
-      date: 'April 2025',
-      description: 'Comprehensive training in full-stack web development using PHP and MySQL technologies.',
+      date: 'September 2023',
+      description: 'Gained hands-on experience with PHP, MySQL, backend logic, and database management and learned to design and implement end-to-end web applications.',
       category: 'Web Development',
-      url: 'https://drive.google.com/file/d/1tNtf2Br41jQT4qneGrWdQSes4afW22zw/view?usp=drive_link'
+      url: fullStackPhp
     },
     {
       title: 'Machine Learning with MATLAB',
-      issuer: 'Infosys Springboard',
-      date: 'March 2025',
+      issuer: 'MathWorks / OnWingspan',
+      date: 'April 2025',
       description: 'Learned machine learning concepts and implementation using MATLAB programming environment.',
       category: 'Machine Learning',
-      url: 'https://drive.google.com/file/d/1UNq4vfj_HeMneboWz-FuzBrxWJfYOcyO/view?usp=drive_link'
+      url: mlMatlab
+    },
+    {
+      title: 'Product Space',
+      issuer: 'Indian Institute of Technology (IIT)',
+      date: 'September 2025',
+      description: 'academic-led program focused on product thinking and user-centric problem solving and understanding of product lifecycle, ideation frameworks, and market analysis. ',
+      category: 'Product Management',
+      url: iitProductSpace
+    },
+    {
+      title: 'Front-End Development',
+      issuer: 'Simplilearn',
+      date: 'December 2024',
+      description: 'Foundational training in HTML5, CSS3, and JavaScript for front-end development and learning principles of responsive web design, UI fundamentals, and browser behavior.',
+      category: 'Web Development',
+      url: simpliLearn
     }
   ];
 
@@ -84,7 +106,7 @@ const Certificates = () => {
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300">
                 {cert.title}
               </h3>
-              
+
               <div className="flex items-center text-primary font-medium mb-3">
                 <span>{cert.issuer}</span>
               </div>
@@ -98,7 +120,7 @@ const Certificates = () => {
                   <Calendar size={14} className="mr-1" />
                   {cert.date}
                 </div>
-                
+
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
