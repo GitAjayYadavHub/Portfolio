@@ -18,9 +18,26 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/GitAjayYadavHub', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:ajayyadav0653987@gmail.com', label: 'Email' }
+    { 
+      icon: Github, 
+      href: 'https://github.com/GitAjayYadavHub', 
+      label: 'GitHub',
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    },
+    { 
+      icon: Linkedin, 
+      href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', 
+      label: 'LinkedIn',
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    },
+    { 
+      icon: Mail, 
+      href: 'mailto:ajayyadav0653987@gmail.com', 
+      label: 'Email',
+      target: '_self'
+    }
   ];
 
   return (
@@ -47,8 +64,8 @@ const Footer = () => {
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.target}
+                    rel={social.rel}
                     className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
