@@ -68,7 +68,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between lg:gap-12">
+          <div className="w-full max-w-5xl mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-12">
             {/* Profile Picture */}
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -124,7 +124,7 @@ const Hero = () => {
 
           {/* Code Block */}
           <motion.div
-            className="max-w-2xl mx-auto lg:mx-0 lg:ml-auto code-block text-left"
+            className="w-full max-w-5xl mx-auto code-block text-left"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.7, duration: 0.5 }}
@@ -151,7 +151,7 @@ const Hero = () => {
 
           {/* Contact Info */}
           <motion.div
-            className="max-w-2xl mx-auto lg:mx-0 lg:ml-auto flex flex-col sm:flex-row items-center justify-center lg:justify-start lg:items-start space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
+            className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.2 }}
@@ -168,7 +168,7 @@ const Hero = () => {
 
           {/* Social Links */}
           <motion.div
-            className="max-w-2xl mx-auto lg:mx-0 lg:ml-auto flex justify-center lg:justify-start space-x-6"
+            className="w-full max-w-5xl mx-auto flex justify-center space-x-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.4 }}
