@@ -23,20 +23,21 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-    
+
+    const payload = new FormData();
+    payload.append('name', formData.name);
+    payload.append('email', formData.email);
+    payload.append('subject', formData.subject);
+    payload.append('message', formData.message);
+    payload.append('_replyto', formData.email);
+
     try {
       const response = await fetch('https://formspree.io/f/xwpbweeg', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          _replyto: formData.email,
-        }),
+        body: payload,
       });
 
       if (response.ok) {

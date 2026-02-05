@@ -87,6 +87,10 @@ const Hero = () => {
                   src={profileImage}
                   alt="Ajay Kumar Yadav"
                   className="w-full h-full object-cover object-center"
+<<<<<<< HEAD
+=======
+                  loading="lazy"
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
                 />
               </motion.div>
               {/* Animated ring around profile picture */}
@@ -184,6 +188,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.6 + index * 0.1 }}
+<<<<<<< HEAD
                 onClick={(e) => {
                   // Ensure the link works properly
                   if (link.href.startsWith('mailto:')) {
@@ -192,6 +197,8 @@ const Hero = () => {
                     window.open(link.href, '_blank', 'noopener,noreferrer');
                   }
                 }}
+=======
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
               >
                 <link.icon size={20} />
               </motion.a>

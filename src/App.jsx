@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';

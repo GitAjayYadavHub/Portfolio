@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { ExternalLink, Github, Calendar } from 'lucide-react';
+=======
+import { Github } from 'lucide-react';
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
 
 const Projects = () => {
   const projects = [
@@ -90,6 +94,10 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-64 lg:h-80 object-cover"
+<<<<<<< HEAD
+=======
+                    loading="lazy"
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
@@ -141,13 +149,18 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                     onClick={() => window.open('https://github.com/GitAjayYadavHub', '_blank')}
+=======
+                    onClick={() => window.open("https://github.com/GitAjayYadavHub", "_blank")}
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
                     aria-label={`View ${project.title} source code`}
                     className="flex items-center space-x-2 px-4 py-2 bg-primary text-dark font-medium rounded-lg hover:bg-primary/90 transition-colors"
                   >
                     <Github size={16} />
                     <span>View Code</span>
                   </motion.button>
+<<<<<<< HEAD
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -158,6 +171,8 @@ const Projects = () => {
                     <ExternalLink size={16} />
                     <span>Live Demo</span>
                   </motion.button>
+=======
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
                 </div>
               </div>
             </motion.div>

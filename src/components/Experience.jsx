@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Briefcase, GraduationCap, Award, Calendar } from 'lucide-react';
+=======
+import { Briefcase, GraduationCap, Award } from 'lucide-react';
+>>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
 
 const Experience = () => {
   const experiences = [
