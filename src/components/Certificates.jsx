@@ -9,28 +9,32 @@ const Certificates = () => {
       issuer: 'Accenture',
       date: 'June 2025',
       description: 'Completed comprehensive simulation covering software development practices and technology implementation strategies.',
-      category: 'Professional Development'
+      category: 'Professional Development',
+      url: 'https://drive.google.com/file/d/18-k1OK66LwgPObGyzSs5z3inkLGo3nxR/view?usp=drive_link'
     },
     {
       title: 'AWS APAC Solutions Architecture',
       issuer: 'Amazon Web Services',
       date: 'May 2025',
       description: 'Gained expertise in designing and implementing scalable cloud architectures on AWS platform.',
-      category: 'Cloud Computing'
+      category: 'Cloud Computing',
+      url: 'https://drive.google.com/file/d/1CNZxjMiLsCIM2496xLDEWDgUiQaeDuzN/view?usp=drive_link'
     },
     {
       title: 'Full Stack Development with PHP & MySQL',
       issuer: 'E & ICT Academy, IIT Kanpur',
       date: 'April 2025',
       description: 'Comprehensive training in full-stack web development using PHP and MySQL technologies.',
-      category: 'Web Development'
+      category: 'Web Development',
+      url: 'https://drive.google.com/file/d/1tNtf2Br41jQT4qneGrWdQSes4afW22zw/view?usp=drive_link'
     },
     {
       title: 'Machine Learning with MATLAB',
       issuer: 'Infosys Springboard',
       date: 'March 2025',
       description: 'Learned machine learning concepts and implementation using MATLAB programming environment.',
-      category: 'Machine Learning'
+      category: 'Machine Learning',
+      url: 'https://drive.google.com/file/d/1UNq4vfj_HeMneboWz-FuzBrxWJfYOcyO/view?usp=drive_link'
     }
   ];
 
@@ -95,14 +99,17 @@ const Certificates = () => {
                   {cert.date}
                 </div>
                 
-                <motion.button
+                <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  href={cert.url}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center space-x-1 text-primary hover:text-white transition-colors text-sm font-medium"
                 >
                   <ExternalLink size={14} />
                   <span>View Certificate</span>
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           ))}
