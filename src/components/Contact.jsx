@@ -32,7 +32,7 @@ const Contact = () => {
     payload.append('_replyto', formData.email);
 
     try {
-      const response = await fetch('https://formspree.io/f/xwpbweeg', {
+      const response = await fetch('https://formspree.io/f/mojnakgq', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -138,7 +138,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
+                I'm always open to discussing new opportunities, interesting projects,
                 or just having a chat about technology and development. Feel free to reach out!
               </p>
             </div>
@@ -208,7 +208,7 @@ const Contact = () => {
             className="bg-gray-900/50 p-8 rounded-lg border border-gray-700"
           >
             <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -226,7 +226,7 @@ const Contact = () => {
                     placeholder="Your name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email
@@ -307,7 +307,7 @@ const Contact = () => {
                 ✅ Message sent successfully! I'll get back to you soon.
               </motion.div>
             )}
-            
+
             {submitStatus === 'error' && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
