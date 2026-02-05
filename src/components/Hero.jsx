@@ -46,7 +46,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Code Animation */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-20 left-10 font-mono text-sm animate-float">
           const developer = &#123;<br />
           &nbsp;&nbsp;name: "Ajay",<br />
