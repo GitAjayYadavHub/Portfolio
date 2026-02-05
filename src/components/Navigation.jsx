@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Logo from '../assets/Logo.png';
 
 const Navigation = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +35,14 @@ const Navigation = ({ activeSection }) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div
-            className="text-xl font-bold text-primary font-mono"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
-            Ajay Yadav
+            <img
+              src={Logo}
+              alt="Ajay Yadav"
+              className="h-8 w-auto"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
