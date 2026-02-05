@@ -86,19 +86,24 @@ const Contact = () => {
       icon: Github,
       label: 'GitHub',
       href: 'https://github.com/GitAjayYadavHub',
-      color: 'hover:text-gray-400'
+      color: 'hover:text-gray-400',
+      target: '_blank',
+      rel: 'noopener noreferrer'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/',
-      color: 'hover:text-blue-400'
+      color: 'hover:text-blue-400',
+      target: '_blank',
+      rel: 'noopener noreferrer'
     },
     {
       icon: Mail,
       label: 'Email',
       href: 'mailto:ajayyadav0653987@gmail.com',
-      color: 'hover:text-red-400'
+      color: 'hover:text-red-400',
+      target: '_self'
     }
   ];
 
@@ -177,8 +182,8 @@ const Contact = () => {
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.target}
+                    rel={social.rel}
                     className={`p-3 bg-gray-800 rounded-lg text-gray-400 ${social.color} transition-all duration-300`}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}

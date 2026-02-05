@@ -6,7 +6,7 @@ import profileImage from '../assets/AjayPicture.jpg';
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const fullText = "Hello, I'm Ajay Kumar Yadav";
+  const fullText = "Ajay Kumar Yadav";
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
@@ -23,28 +23,25 @@ const Hero = () => {
       icon: Github, 
       href: 'https://github.com/GitAjayYadavHub', 
       label: 'GitHub',
-      external: true 
+      target: '_blank',
+      rel: 'noopener noreferrer'
     },
     { 
       icon: Linkedin, 
       href: 'https://www.linkedin.com/in/ajay-kumar-yadav-a41715282/', 
       label: 'LinkedIn',
-      external: true 
+      target: '_blank',
+      rel: 'noopener noreferrer'
     },
     { 
       icon: Mail, 
       href: 'mailto:ajayyadav0653987@gmail.com', 
       label: 'Email',
-      external: false 
+      target: '_self'
     },
   ];
 
-  const handleViewWork = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -87,10 +84,7 @@ const Hero = () => {
                   src={profileImage}
                   alt="Ajay Kumar Yadav"
                   className="w-full h-full object-cover object-center"
-<<<<<<< HEAD
-=======
                   loading="lazy"
->>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
                 />
               </motion.div>
               {/* Animated ring around profile picture */}
@@ -179,8 +173,8 @@ const Hero = () => {
               <motion.a
                 key={link.label}
                 href={link.href}
-                target={link.external ? "_blank" : "_self"}
-                rel={link.external ? "noopener noreferrer" : undefined}
+                target={link.target}
+                rel={link.rel}
                 aria-label={link.label}
                 className="p-3 bg-gray-800 rounded-full hover:bg-primary hover:text-dark transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -188,17 +182,6 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.6 + index * 0.1 }}
-<<<<<<< HEAD
-                onClick={(e) => {
-                  // Ensure the link works properly
-                  if (link.href.startsWith('mailto:')) {
-                    window.location.href = link.href;
-                  } else if (link.external) {
-                    window.open(link.href, '_blank', 'noopener,noreferrer');
-                  }
-                }}
-=======
->>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
               >
                 <link.icon size={20} />
               </motion.a>
@@ -211,10 +194,10 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 3.0 }}
           >
-            <motion.button
-              onClick={handleViewWork}
+            <motion.a
+              href="#projects"
               aria-label="View my projects"
-              className="px-8 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
+              className="px-8 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 cursor-pointer inline-flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{ 
@@ -225,7 +208,7 @@ const Hero = () => {
               }}
             >
               View My Work
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

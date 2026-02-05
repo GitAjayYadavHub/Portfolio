@@ -1,10 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Briefcase, GraduationCap, Award, Calendar } from 'lucide-react';
-=======
 import { Briefcase, GraduationCap, Award } from 'lucide-react';
->>>>>>> dfeddeb (Clean up unused imports and simplify buttons)
 
 const Experience = () => {
   const experiences = [
@@ -20,10 +16,10 @@ const Experience = () => {
         'Frontend: HTML, CSS, JavaScript, Bootstrap 5',
         'Backend: Python, Django, Django REST Framework, PostgreSQL',
         'Tools: Postman, Git & GitHub, VSCode',
-        'Developed features: IPO Display, Search & Filter, Admin Panel, REST API, User Authentication'
+        'Developed features: IPO Display, Search & Filter, Admin Panel, REST API, User Authentication',
       ],
-      icon: Briefcase
-    }
+      icon: Briefcase,
+    },
   ];
 
   const education = [
@@ -33,7 +29,7 @@ const Experience = () => {
       location: 'Ghaziabad, Uttar Pradesh',
       period: '2022 - 2026',
       cgpa: '7.8',
-      icon: GraduationCap
+      icon: GraduationCap,
     },
     {
       degree: 'Class XII',
@@ -41,26 +37,26 @@ const Experience = () => {
       location: 'Saharanpur, Uttar Pradesh',
       period: '2018 - 2020',
       percentage: '78%',
-      icon: GraduationCap
-    }
+      icon: GraduationCap,
+    },
   ];
 
   const achievements = [
     {
       title: 'LeetCode Problem Solver',
       description: 'Solved 100+ Questions on LeetCode',
-      icon: Award
+      icon: Award,
     },
     {
       title: 'Product Management Bootcamp',
       description: 'Attended 4-Week Immersive Bootcamp by E-Cell, IIT Guwahati',
-      icon: Award
+      icon: Award,
     },
     {
       title: 'DSA Bootcamp',
       description: 'Completed 30 Days DSA Bootcamp in C++ on Unstop Platform',
-      icon: Award
-    }
+      icon: Award,
+    },
   ];
 
   return (
@@ -89,7 +85,7 @@ const Experience = () => {
               <Briefcase className="mr-3 text-primary" size={24} />
               Professional Experience
             </h3>
-            
+
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -105,7 +101,9 @@ const Experience = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-white">{exp.title}</h4>
                       <p className="text-primary font-medium">{exp.company}</p>
-                      <p className="text-gray-400 text-sm">{exp.location} • {exp.duration}</p>
+                      <p className="text-gray-400 text-sm">
+                        {exp.location} • {exp.duration}
+                      </p>
                     </div>
                     <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
                       {exp.period}
@@ -171,7 +169,7 @@ const Experience = () => {
               <Award className="mr-3 text-primary" size={24} />
               Achievements
             </h3>
-            
+
             <div className="space-y-6">
               {achievements.map((achievement, index) => (
                 <motion.div
