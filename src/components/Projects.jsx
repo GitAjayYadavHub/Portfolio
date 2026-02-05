@@ -118,20 +118,9 @@ const Projects = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
                   <p className="text-primary text-sm mb-2">{project.tagline}</p>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>
-                        <span className="text-gray-400 font-semibold">Summary:</span> {project.description}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span className="text-green-300 bg-green-500/10 border border-green-500/20 rounded-md px-3 py-2 transition-colors duration-300 hover:bg-primary/10 hover:border-primary/30">
-                        <span className="text-gray-300 font-semibold">Impact:</span> {project.impact}
-                      </span>
-                    </li>
-                  </ul>
+                  <div className="text-green-300 bg-green-500/10 border border-green-500/20 rounded-md px-3 py-2 transition-colors duration-300 hover:bg-primary/10 hover:border-primary/30">
+                    <span className="text-gray-300 font-semibold">Impact:</span> {project.impact}
+                  </div>
                 </div>
 
                 <div>
