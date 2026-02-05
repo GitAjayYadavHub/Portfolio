@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/Logo.gif';
 
 const Navigation = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
