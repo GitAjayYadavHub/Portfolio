@@ -86,6 +86,33 @@ const Hero = () => {
                   alt="Ajay Kumar Yadav"
                   className="w-full h-full object-cover object-center grayscale transition-all duration-300 group-hover:grayscale-0"
                   loading="lazy"
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between lg:gap-12">
+            {/* Profile Picture */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex justify-center lg:justify-start mb-8 lg:mb-0"
+            >
+              <div className="relative group">
+                <motion.div
+                  className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-2xl overflow-hidden border-4 border-primary/30 shadow-2xl"
+                  whileHover={{ scale: 1.05, borderColor: 'rgba(0, 255, 65, 0.6)' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={profileImage}
+                    alt="Ajay Kumar Yadav"
+                    className="w-full h-full object-cover object-center grayscale transition-all duration-300 group-hover:grayscale-0"
+                    loading="lazy"
+                  />
+                </motion.div>
+                <div className="absolute inset-0 rounded-2xl ring-4 ring-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                {/* Animated ring around profile picture */}
+                <motion.div
+                  className="absolute inset-0 rounded-2xl border-2 border-primary/20"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 />
               </motion.div>
               <div className="absolute inset-0 rounded-full ring-4 ring-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -97,6 +124,8 @@ const Hero = () => {
               />
             </div>
           </motion.div>
+              </div>
+            </motion.div>
 
           {/* Main Heading */}
           <div className="space-y-4">
@@ -118,6 +147,27 @@ const Hero = () => {
             >
               Software Developer | Full-Stack & ML Enthusiast
             </motion.p>
+            {/* Main Heading */}
+            <div className="space-y-4 text-center lg:text-left">
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-7xl font-bold"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <span className="text-white">{displayText}</span>
+                <span className="text-primary animate-blink">|</span>
+              </motion.h1>
+              
+              <motion.p
+                className="text-xl md:text-2xl text-gray-300 font-light"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+              >
+                Software Developer | Full-Stack & ML Enthusiast
+              </motion.p>
+            </div>
           </div>
 
           {/* Code Block */}
