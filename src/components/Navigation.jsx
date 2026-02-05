@@ -26,7 +26,7 @@ const Navigation = ({ activeSection }) => {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-40 bg-dark/95 backdrop-blur-md border-b border-gray-800"
+      className="relative z-40 bg-dark/95 backdrop-blur-md border-b border-gray-800"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
