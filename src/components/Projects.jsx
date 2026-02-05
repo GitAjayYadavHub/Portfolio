@@ -11,8 +11,7 @@ const Projects = () => {
       title: 'DuoInsights – Learning Insights & Performance Metrics',
       tagline: 'Turning Learning Data into Insights.',
       category: 'Data analysis / Visualization',
-      description:
-        'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
+      description: 'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
       technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Shadcn UI'],
       features: [
         'User progress analysis & lesson completion trends',
@@ -28,15 +27,14 @@ const Projects = () => {
       title: 'CareTrix',
       tagline: 'Smart Healthcare Management Platform',
       category: 'MERN Stack',
-      description:
-        'CareTrix is a healthcare management web application designed to simplify hospital operations. It allows efficient management of patients, doctors, and appointments through a centralized and user-friendly dashboard. The platform focuses on improving workflow efficiency, reducing manual effort, and enhancing the overall healthcare experience.',
+      description: 'CareTrix is a healthcare management web application designed to simplify hospital operations. It allows efficient management of patients, doctors, and appointments through a centralized and user-friendly dashboard. The platform focuses on improving workflow efficiency, reducing manual effort, and enhancing the overall healthcare experience.',
       technologies: ['React', 'Tailwind CSS', 'Express', 'Node.js', 'MongoDB', 'Socket.io'],
       features: [
         'Patient and staff views with organized workflows',
         'Responsive UI for admin and operator use',
         'Fast navigation with clear action affordances'
       ],
-      impact: 'Streamlines hospital operations through centralized patient, doctor, and appointment management dashboards, improving patient care and reducing administrative burden.',
+      impact: 'Streamlines hospital operations through centralized patient, doctor, and appointment management dashboards.',
       image: CareTrixImage,
       codeUrl: 'https://github.com/GitAjayYadavHub/CareTrix',
       liveUrl: 'https://hospitrix-frontend.onrender.com/'
@@ -45,8 +43,7 @@ const Projects = () => {
       title: 'DrawSync – Live Collaborative Whiteboard',
       tagline: 'Stay in Sync. Draw in Real Time.',
       category: 'Digital learning',
-      description:
-        'DrawSync is a real-time collaborative drawing application that enables multiple users to draw together on a shared canvas. It is built to support brainstorming, teaching, and team collaboration by providing a smooth, interactive, and easy-to-use drawing experience directly in the browser.',
+      description: 'DrawSync is a real-time collaborative drawing application that enables multiple users to draw together on a shared canvas. It is built to support brainstorming, teaching, and team collaboration by providing a smooth, interactive, and easy-to-use drawing experience directly in the browser.',
       technologies: ['React', 'WebSockets', 'Tailwind CSS', 'Canvas', 'BarChart', 'Chart.js'],
       features: [
         'Live multi-user drawing and cursor presence',
