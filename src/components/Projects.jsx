@@ -1,50 +1,62 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
+import DuoInsightsImage from '../assets/DuoInsights.jpg';
+import CareTrixImage from '../assets/CareTrix.png';
+import DrawSyncImage from '../assets/DrawSync.jpg';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Duolingo MVP Dashboard",
-      description: "Developed a full-stack dashboard to track and visualize key performance metrics for a Duolingo MVP, including user activity, lesson completion, and streaks. Features real-time updates and comprehensive analytics.",
-      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Chart.js"],
+      title: 'DuoInsights – Learning Insights & Performance Metrics',
+      tagline: 'Turning Learning Data into Insights.',
+      category: 'Data / Visualization',
+      description:
+        'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
+      technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Netlify'],
       features: [
-        "Live metrics dashboard with real-time updates",
-        "30-day trend analysis for key metrics",
-        "User progress tracking",
-        "Gamification elements visualization",
-        "Download trend monitoring"
+        'User progress analysis & lesson completion trends',
+        'Learning streak visualization and performance comparison charts',
+        'Interactive dashboards with data-driven views'
       ],
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "Full-Stack"
+      impact: 'Made user learning trends explorable at a glance, speeding insight discovery for stakeholders.',
+      image: DuoInsightsImage,
+      codeUrl: 'https://github.com/GitAjayYadavHub/Duolingo-Analysis-Dashboard',
+      liveUrl: 'https://duolingo-mvp-plan-analysis.netlify.app/'
     },
     {
-      title: "Modern Fitness Exercises App",
-      description: "A comprehensive fitness application providing exercise database categorized by muscle group, equipment, and difficulty. Users can search exercises, view instructions, watch videos, and track progress.",
-      technologies: ["MERN Stack", "Tailwind CSS", "MongoDB", "Express.js"],
+      title: 'CareTrix',
+      tagline: 'Smart Healthcare Management Platform',
+      category: 'Full-Stack',
+      description:
+        'CareTrix is a healthcare management web application designed to simplify hospital operations. It allows efficient management of patients, doctors, and appointments through a centralized and user-friendly dashboard. The platform focuses on improving workflow efficiency, reducing manual effort, and enhancing the overall healthcare experience.',
+      technologies: ['React', 'Tailwind CSS', 'Render'],
       features: [
-        "Search exercises by muscle group",
-        "View detailed exercise instructions",
-        "Watch related workout videos",
-        "Discover similar exercises",
-        "Smooth and responsive interface"
+        'Patient and staff views with organized workflows',
+        'Responsive UI for admin and operator use',
+        'Fast navigation with clear action affordances'
       ],
-      image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "Web App"
+      impact: 'Improved task clarity and reduced navigation friction for hospital operators.',
+      image: CareTrixImage,
+      codeUrl: 'https://github.com/GitAjayYadavHub/CareTrix',
+      liveUrl: 'https://hospitrix-frontend.onrender.com/'
     },
     {
-      title: "PCM ChapterWise Question",
-      description: "A web application designed to help students practice chapter-wise questions in Physics, Chemistry, and Mathematics. Features categorized question banks and progress tracking with an intuitive interface.",
-      technologies: ["React.js", "Tailwind CSS", "JavaScript", "HTML/CSS"],
+      title: 'DrawSync – Live Collaborative Whiteboard',
+      tagline: 'Stay in Sync. Draw in Real Time.',
+      category: 'Collaboration',
+      description:
+        'DrawSync is a real-time collaborative drawing application that enables multiple users to draw together on a shared canvas. It is built to support brainstorming, teaching, and team collaboration by providing a smooth, interactive, and easy-to-use drawing experience directly in the browser.',
+      technologies: ['React', 'WebSockets', 'Tailwind CSS', 'Vercel'],
       features: [
-        "Categorized question banks for PCM subjects",
-        "Progress tracking for each chapter",
-        "Responsive and intuitive user interface",
-        "Chapter-wise organization",
-        "Student-friendly design"
+        'Live multi-user drawing and cursor presence',
+        'Shared canvases that sync instantly',
+        'Smooth interactions for ideation sessions'
       ],
-      image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "Education"
+      impact: 'Enabled teams to co-create visuals in real time, cutting iteration cycles during workshops.',
+      image: DrawSyncImage,
+      codeUrl: 'https://github.com/GitAjayYadavHub/DrawSync',
+      liveUrl: 'https://collabydraw-web.vercel.app/'
     }
   ];
 
@@ -62,7 +74,7 @@ const Projects = () => {
             Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Crafted with intent, built with care. Here are some of my recent projects that showcase my skills and passion for development.
+            Crafted with intent, built with care. Here are some projects that showcase my focus on impactful software.
           </p>
           <div className="w-20 h-1 bg-primary mx-auto mt-4"></div>
         </motion.div>
@@ -90,6 +102,7 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-64 lg:h-80 object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
@@ -103,15 +116,12 @@ const Projects = () => {
                       {project.category}
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
+                  <p className="text-primary text-sm mb-2">{project.tagline}</p>
+                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                  <p className="text-green-400 text-sm mt-3 font-medium">Impact: {project.impact}</p>
                 </div>
 
-                {/* Technologies */}
                 <div>
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -123,7 +133,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Key Features */}
                 <div>
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -136,28 +145,31 @@ const Projects = () => {
                   </ul>
                 </div>
 
-                {/* Action Buttons */}
                 <div className="flex space-x-4">
-                  <motion.button
+                  <motion.a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => window.open('https://github.com/GitAjayYadavHub', '_blank')}
                     aria-label={`View ${project.title} source code`}
                     className="flex items-center space-x-2 px-4 py-2 bg-primary text-dark font-medium rounded-lg hover:bg-primary/90 transition-colors"
                   >
                     <Github size={16} />
                     <span>View Code</span>
-                  </motion.button>
-                  <motion.button
+                  </motion.a>
+                  <motion.a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => window.open('#', '_blank')}
                     aria-label={`View ${project.title} live demo`}
                     className="flex items-center space-x-2 px-4 py-2 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-dark transition-all"
                   >
                     <ExternalLink size={16} />
                     <span>Live Demo</span>
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
