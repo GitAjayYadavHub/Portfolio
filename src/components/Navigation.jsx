@@ -1,10 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Logo from '../assets/Logo.gif';
 
 const Navigation = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY.current;
+
+      if (!isMenuOpen && isScrollingDown && currentScrollY > 80) {
+        setIsNavVisible(false);
+      } else {
+        setIsNavVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMenuOpen]);
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -28,7 +48,7 @@ const Navigation = ({ activeSection }) => {
     <motion.nav
       className="relative z-40 bg-dark/95 backdrop-blur-md border-b border-gray-800"
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      animate={{ y: isNavVisible ? 0 : -100 }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,6 +63,9 @@ const Navigation = ({ activeSection }) => {
               alt="Ajay Yadav"
               className="h-8 w-auto"
             />
+            <h3 className="text-2xl font-bold text-primary font-mono mb-4">
+              Ajay Yadav
+            </h3>
           </motion.div>
 
           {/* Desktop Navigation */}
