@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, MapPin, Clock } from 'lucide-react';
 import profileImage from '../assets/AjayPicture.jpg';
-import sealIcon from '../assets/seal.gif';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -112,26 +111,16 @@ const Hero = () => {
                 <span className="text-primary animate-blink">|</span>
               </motion.h1>
               
-              <motion.ul
-                className="space-y-2 text-xl md:text-2xl text-gray-300 font-light font-mono tracking-wide leading-relaxed select-none"
+              <motion.p
+                className="text-xl md:text-2xl text-gray-300 font-light font-mono tracking-wide leading-loose hover:text-yellow-400 transition-colors"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
-                <li className="group flex items-center gap-3 rounded-lg px-2 py-1 transition-all duration-300 hover:bg-primary/10 hover:shadow-[0_0_22px_rgba(0,255,65,0.45)]">
-                  <img src={sealIcon} alt="" className="h-5 w-5 transition-transform duration-300 group-hover:animate-bounce [animation-duration:1.6s]" />
-                  <span className="transition-colors duration-300 group-hover:text-primary/90">Software Developer</span>
-                </li>
-                <li className="group flex items-center gap-3 rounded-lg px-2 py-1 transition-all duration-300 hover:bg-primary/10 hover:shadow-[0_0_22px_rgba(0,255,65,0.45)]">
-                  <img src={sealIcon} alt="" className="h-5 w-5 transition-transform duration-300 group-hover:animate-bounce [animation-duration:1.6s]" />
-                  <span className="transition-colors duration-300 group-hover:text-primary/90">MERN-Stack & ML Enthusiast</span>
-                </li>
-                <li className="group flex items-center gap-3 rounded-lg px-2 py-1 transition-all duration-300 hover:bg-primary/10 hover:shadow-[0_0_22px_rgba(0,255,65,0.45)]">
-                  <img src={sealIcon} alt="" className="h-5 w-5 transition-transform duration-300 group-hover:animate-bounce [animation-duration:1.6s]" />
-                  <span className="transition-colors duration-300 group-hover:text-primary/90">Competitive Programmer (⭐⭐⭐)</span>
-                </li>
-              </motion.ul>
-
+                Software Developer <br />
+                MERN-Stack & ML Enthusiast <br />
+                Competitive Programmer (⭐⭐⭐)
+              </motion.p>
             </div>
           </div>
 
