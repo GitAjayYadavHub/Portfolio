@@ -37,10 +37,10 @@ const Hero = () => {
       icon: Mail, 
       href: 'mailto:ajayyadav0653987@gmail.com', 
       label: 'Email',
-      target: '_self'
+      target: '_self',
+      rel: 'noopener noreferrer'
     },
   ];
-  
 
 
   return (
@@ -197,6 +197,10 @@ const Hero = () => {
             <motion.a
               href="#projects"
               aria-label="View my projects"
+              onClick={(event) => {
+                event.preventDefault();
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="px-8 py-3 bg-primary text-dark font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 cursor-pointer inline-flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
