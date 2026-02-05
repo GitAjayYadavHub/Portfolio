@@ -19,14 +19,6 @@ const Certificates = () => {
       url: developerJobSim
     },
     {
-      title: 'AWS APAC Solutions Architecture',
-      issuer: 'Amazon Web Services',
-      date: 'May 2025',
-      description: 'Developed foundational understanding of AWS solutions architecture concepts, scalability, and system reliability on AWS platform.',
-      category: 'Cloud Computing',
-      url: awsApac
-    },
-    {
       title: 'Full Stack Development with PHP & MySQL',
       issuer: 'E & ICT Academy, IIT Kanpur',
       date: 'September 2023',
@@ -41,6 +33,14 @@ const Certificates = () => {
       description: 'Learned machine learning concepts and implementation using MATLAB programming environment.',
       category: 'Machine Learning',
       url: mlMatlab
+    },    
+    {
+      title: 'AWS APAC Solutions Architecture',
+      issuer: 'Amazon Web Services',
+      date: 'May 2025',
+      description: 'Developed foundational understanding of AWS solutions architecture concepts, scalability, and system reliability on AWS platform.',
+      category: 'Cloud Computing',
+      url: awsApac
     },
     {
       title: 'Product Space',
@@ -63,6 +63,7 @@ const Certificates = () => {
   const categoryColors = {
     'Professional Development': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
     'Cloud Computing': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
+    'Product Management': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
     'Web Development': 'bg-green-500/10 text-green-400 border-green-500/20',
     'Machine Learning': 'bg-purple-500/10 text-purple-400 border-purple-500/20'
   };
