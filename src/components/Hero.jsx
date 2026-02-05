@@ -43,6 +43,7 @@ const Hero = () => {
   ];
 
 
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Code Animation */}
@@ -74,7 +75,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex justify-center mb-8"
           >
-            <div className="relative">
+            <div className="relative group">
               <motion.div
                 className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl"
                 whileHover={{ scale: 1.05, borderColor: 'rgba(0, 255, 65, 0.6)' }}
@@ -83,10 +84,11 @@ const Hero = () => {
                 <img
                   src={profileImage}
                   alt="Ajay Kumar Yadav"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center grayscale transition-all duration-300 group-hover:grayscale-0"
                   loading="lazy"
                 />
               </motion.div>
+              <div className="absolute inset-0 rounded-full ring-4 ring-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               {/* Animated ring around profile picture */}
               <motion.div
                 className="absolute inset-0 rounded-full border-2 border-primary/20"
