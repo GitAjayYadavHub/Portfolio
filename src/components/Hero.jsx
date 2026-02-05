@@ -117,7 +117,9 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
-                Software Developer | Full-Stack & ML Enthusiast
+                Software Developer <br />
+                MERN-Stack & ML Enthusiast <br />
+                Competitive Programmer (⭐⭐⭐)
               </motion.p>
             </div>
           </div>
