@@ -24,7 +24,7 @@ const Experience = () => {
 
   const education = [
     {
-      degree: 'Bachelor of Technology in Computer Science & Engineering',
+      degree: 'Bachelor of Technology (CSE)',
       institution: 'Ajay Kumar Garg Engineering College',
       location: 'Ghaziabad, Uttar Pradesh',
       period: '2022 - 2026',
