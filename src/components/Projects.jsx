@@ -58,35 +58,6 @@ const Projects = () => {
       codeUrl: 'https://github.com/GitAjayYadavHub/DrawSync',
       liveUrl: 'https://collabydraw-web.vercel.app/'
     }
-  //   //    {
-  //     title: "Modern Fitness Exercises App",
-  //     description: "A comprehensive fitness application providing exercise database categorized by muscle group, equipment, and difficulty. Users can search exercises, view instructions, watch videos, and track progress.",
-  //     technologies: ["MERN Stack", "Tailwind CSS", "MongoDB", "Express.js"],
-  //     features: [
-  //       "Search exercises by muscle group",
-  //       "View detailed exercise instructions",
-  //       "Watch related workout videos",
-  //       "Discover similar exercises",
-  //       "Smooth and responsive interface"
-  //     ],
-  //     image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=800",
-  //     category: "Web App"
-  //   },
-  //   {
-  //     title: "PCM ChapterWise Question",
-  //     description: "A web application designed to help students practice chapter-wise questions in Physics, Chemistry, and Mathematics. Features categorized question banks and progress tracking with an intuitive interface.",
-  //     technologies: ["React.js", "Tailwind CSS", "JavaScript", "HTML/CSS"],
-  //     features: [
-  //       "Categorized question banks for PCM subjects",
-  //       "Progress tracking for each chapter",
-  //       "Responsive and intuitive user interface",
-  //       "Chapter-wise organization",
-  //       "Student-friendly design"
-  //     ],
-  //     image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
-  //     category: "Education"
-  //   }
-  // ];
   ];
 
   return (
@@ -147,10 +118,6 @@ const Projects = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
                   <p className="text-primary text-sm mb-2">{project.tagline}</p>
-                  {/* <p className="text-gray-300 leading-relaxed">{project.description}</p>
-                  <p className="text-green-400 text-sm mt-3 font-medium">Impact: {project.impact}</p> */}
-                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
-                  <p className="text-green-400 text-sm mt-3 font-medium">Impact: {project.impact}</p>
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
@@ -160,8 +127,8 @@ const Projects = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span className="text-green-400">
-                        <span className="text-gray-400 font-semibold">Impact:</span> {project.impact}
+                      <span className="text-green-300 bg-green-500/10 border border-green-500/20 rounded-md px-3 py-2 transition-colors duration-300 hover:bg-primary/10 hover:border-primary/30">
+                        <span className="text-gray-300 font-semibold">Impact:</span> {project.impact}
                       </span>
                     </li>
                   </ul>
