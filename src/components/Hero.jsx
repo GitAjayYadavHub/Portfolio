@@ -112,14 +112,14 @@ const Hero = () => {
               </motion.h1>
               
               <motion.p
-                className="text-xl md:text-2xl text-gray-300 font-light font-mono tracking-wide leading-relaxed hover:text-primary/90 transition-colors"
+                className="text-xl md:text-2xl text-gray-300 font-light font-mono tracking-wide leading-loose hover:text-yellow-400 transition-colors"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
-                Software Developer <br />
-                MERN-Stack & ML Enthusiast <br />
-                Competitive Programmer (⭐⭐⭐)
+                <span className="block">Software Developer</span>
+                <span className="block mt-[15px]">MERN-Stack & ML Enthusiast</span>
+                <span className="block mt-[15px]">Competitive Programmer (⭐⭐⭐)</span>
               </motion.p>
             </div>
           </div>
