@@ -11,7 +11,8 @@ const Projects = () => {
       title: 'DuoInsights – Learning Insights & Performance Metrics',
       tagline: 'Turning Learning Data into Insights.',
       category: 'Data analysis / Visualization',
-      description: 'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
+      description:
+        'The DuoInsights is a data-driven project that visualizes user learning behavior and engagement metrics. It presents insights using interactive charts and dashboards, helping to understand progress trends, user activity, and learning performance through clear and meaningful visualizations.',
       technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Shadcn UI'],
       features: [
         'User progress analysis & lesson completion trends',
@@ -27,14 +28,15 @@ const Projects = () => {
       title: 'CareTrix',
       tagline: 'Smart Healthcare Management Platform',
       category: 'MERN Stack',
-      description: 'CareTrix is a healthcare management web application designed to simplify hospital operations. It allows efficient management of patients, doctors, and appointments through a centralized and user-friendly dashboard. The platform focuses on improving workflow efficiency, reducing manual effort, and enhancing the overall healthcare experience.',
+      description:
+        'CareTrix is a healthcare management web application designed to simplify hospital operations. It allows efficient management of patients, doctors, and appointments through a centralized and user-friendly dashboard. The platform focuses on improving workflow efficiency, reducing manual effort, and enhancing the overall healthcare experience.',
       technologies: ['React', 'Tailwind CSS', 'Express', 'Node.js', 'MongoDB', 'Socket.io'],
       features: [
         'Patient and staff views with organized workflows',
         'Responsive UI for admin and operator use',
         'Fast navigation with clear action affordances'
       ],
-      impact: 'Streamlines hospital operations through centralized patient, doctor, and appointment management dashboards.',
+      impact: 'Streamlines hospital operations through centralized patient, doctor, and appointment management dashboards, improving patient care and reducing administrative burden.',
       image: CareTrixImage,
       codeUrl: 'https://github.com/GitAjayYadavHub/CareTrix',
       liveUrl: 'https://hospitrix-frontend.onrender.com/'
@@ -42,8 +44,9 @@ const Projects = () => {
     {
       title: 'DrawSync – Live Collaborative Whiteboard',
       tagline: 'Stay in Sync. Draw in Real Time.',
-      category: 'Digital learning',
-      description: 'DrawSync is a real-time collaborative drawing application that enables multiple users to draw together on a shared canvas. It is built to support brainstorming, teaching, and team collaboration by providing a smooth, interactive, and easy-to-use drawing experience directly in the browser.',
+      category: 'Digital Learning',
+      description:
+        'DrawSync is a real-time collaborative drawing application that enables multiple users to draw together on a shared canvas. It is built to support brainstorming, teaching, and team collaboration by providing a smooth, interactive, and easy-to-use drawing experience directly in the browser.',
       technologies: ['React', 'WebSockets', 'Tailwind CSS', 'Canvas', 'BarChart', 'Chart.js'],
       features: [
         'Live multi-user drawing and cursor presence',
@@ -84,12 +87,12 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-8 items-center ${
+              className={`grid lg:grid-cols-2 gap-8 ${
                 index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
               }`}
             >
-              {/* Project Image */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              {/* Project Image and Technologies */}
+              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <motion.div
                   className="relative group overflow-hidden rounded-lg"
                   whileHover={{ scale: 1.02 }}
@@ -103,10 +106,22 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
+
+                {/* Technologies Below Image */}
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Technologies Used:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="tech-tag text-xs">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               {/* Project Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+              <div className={`space-y-6 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div>
                   <div className="flex items-center space-x-2 mb-2">
                     <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
@@ -124,22 +139,11 @@ const Projects = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span className="text-green-300 bg-green-500/10 border border-green-500/20 rounded-md px-3 py-2 transition-colors duration-300 hover:bg-primary/10 hover:border-primary/30">
+                      <span className="text-gray-300">
                         <span className="text-gray-300 font-semibold">Impact:</span> {project.impact}
                       </span>
                     </li>
                   </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Technologies Used:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span key={tech} className="tech-tag text-xs">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
 
                 <div>
