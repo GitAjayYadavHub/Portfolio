@@ -9,43 +9,63 @@ const Skills = () => {
     {
       icon: Code,
       title: "Languages & Frameworks",
+      color: "blue",
+      iconColor: "text-blue-400",
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/20",
+      hoverBorder: "hover:border-blue-500/40",
       skills: [
-        { name: "JavaScript", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "React.js", level: 85 },
-        { name: "Node.js", level: 80 },
-        { name: "Django", level: 75 },
-        { name: "C++", level: 70 }
+        { name: "JavaScript", level: 80, progressColor: "bg-gradient-to-r from-yellow-500 to-yellow-400" },
+        { name: "Python", level: 75, progressColor: "bg-gradient-to-r from-blue-500 to-blue-400" },
+        { name: "React.js", level: 85, progressColor: "bg-gradient-to-r from-cyan-500 to-cyan-400" },
+        { name: "Node.js", level: 80, progressColor: "bg-gradient-to-r from-green-500 to-green-400" },
+        { name: "Django", level: 75, progressColor: "bg-gradient-to-r from-emerald-500 to-emerald-400" },
+        { name: "C++", level: 70, progressColor: "bg-gradient-to-r from-indigo-500 to-indigo-400" }
       ]
     },
     {
       icon: Database,
       title: "Databases",
+      color: "green",
+      iconColor: "text-green-400",
+      bgColor: "bg-green-500/10",
+      borderColor: "border-green-500/20",
+      hoverBorder: "hover:border-green-500/40",
       skills: [
-        { name: "MongoDB", level: 75 },
-        { name: "MySQL", level: 70 },
-        { name: "PostgreSQL", level: 70 }
+        { name: "MongoDB", level: 75, progressColor: "bg-gradient-to-r from-green-500 to-green-400" },
+        { name: "MySQL", level: 70, progressColor: "bg-gradient-to-r from-blue-500 to-blue-400" },
+        { name: "PostgreSQL", level: 70, progressColor: "bg-gradient-to-r from-sky-500 to-sky-400" }
       ]
     },
     {
       icon: Wrench,
       title: "Tools & Technologies",
+      color: "purple",
+      iconColor: "text-purple-400",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/20",
+      hoverBorder: "hover:border-purple-500/40",
       skills: [
-        { name: "Git & GitHub", level: 75 },
-        { name: "Tailwind CSS", level: 80 },
-        { name: "Bootstrap", level: 75 },
-        { name: "VSCode", level: 80 },
-        { name: "Postman", level: 75 }
+        { name: "Git & GitHub", level: 75, progressColor: "bg-gradient-to-r from-orange-500 to-orange-400" },
+        { name: "Tailwind CSS", level: 80, progressColor: "bg-gradient-to-r from-cyan-500 to-cyan-400" },
+        { name: "Bootstrap", level: 75, progressColor: "bg-gradient-to-r from-purple-500 to-purple-400" },
+        { name: "VSCode", level: 80, progressColor: "bg-gradient-to-r from-blue-500 to-blue-400" },
+        { name: "Postman", level: 75, progressColor: "bg-gradient-to-r from-amber-500 to-amber-400" }
       ]
     },
     {
       icon: Brain,
       title: "Concepts & Methodologies",
+      color: "orange",
+      iconColor: "text-orange-400",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/20",
+      hoverBorder: "hover:border-orange-500/40",
       skills: [
-        { name: "Data Structures", level: 75 },
-        { name: "Algorithms", level: 70 },
-        { name: "REST APIs", level: 80 },
-        { name: "Responsive Design", level: 85 }
+        { name: "Data Structures", level: 75, progressColor: "bg-gradient-to-r from-pink-500 to-pink-400" },
+        { name: "Algorithms", level: 70, progressColor: "bg-gradient-to-r from-red-500 to-red-400" },
+        { name: "REST APIs", level: 80, progressColor: "bg-gradient-to-r from-teal-500 to-teal-400" },
+        { name: "Responsive Design", level: 85, progressColor: "bg-gradient-to-r from-violet-500 to-violet-400" }
       ]
     }
   ];
@@ -95,10 +115,10 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-900/50 p-6 rounded-lg border border-gray-700"
+              className={`${category.bgColor} p-6 rounded-lg border ${category.borderColor} ${category.hoverBorder} transition-all duration-300`}
             >
               <div className="flex items-center mb-6">
-                <category.icon className="text-primary mr-3" size={24} />
+                <category.icon className={`${category.iconColor} mr-3`} size={24} />
                 <h3 className="text-xl font-semibold text-white">{category.title}</h3>
               </div>
 
@@ -107,11 +127,11 @@ const Skills = () => {
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-primary text-sm font-semibold">{skill.level}%</span>
+                      <span className={`${category.iconColor} text-sm font-semibold`}>{skill.level}%</span>
                     </div>
                     <div className="skill-bar">
                       <motion.div
-                        className="skill-progress"
+                        className={`${skill.progressColor} h-full rounded-full shadow-lg`}
                         initial={{ width: 0 }}
                         animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
                         transition={{ 
@@ -119,6 +139,7 @@ const Skills = () => {
                           delay: categoryIndex * 0.2 + skillIndex * 0.1,
                           ease: "easeOut"
                         }}
+                        whileHover={{ scale: 1.02 }}
                       />
                     </div>
                   </div>
