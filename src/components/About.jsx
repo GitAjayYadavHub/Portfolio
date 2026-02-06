@@ -4,26 +4,31 @@ import { Code, Lightbulb, Target, Heart } from 'lucide-react';
 
 const About = () => {
   const highlights = [
-    {
-      icon: Code,
-      title: "Problem Solver",
-      description: "I enjoy breaking down complex problems into manageable solutions"
-    },
-    {
-      icon: Lightbulb,
-      title: "Curious Learner",
-      description: "Always exploring new technologies and methodologies"
-    },
-    {
-      icon: Target,
-      title: "Goal-Oriented",
-      description: "Focused on delivering impactful and meaningful projects"
-    },
-    {
-      icon: Heart,
-      title: "Passionate",
-      description: "Driven by the desire to create technology that matters"
-    }
+            {
+          icon: Code,
+          title: "Analytical Problem Solver",
+          description: "Skilled at analyzing complex challenges and translating them into efficient, scalable solutions through structured thinking.",
+          gradient: "from-blue-500 to-cyan-500"
+        },
+        {
+          icon: Lightbulb,
+          title: "Continuous Learner & Innovator",
+          description: "Proactively explores emerging technologies, tools, and best practices to stay ahead in a rapidly evolving tech landscape.",
+          gradient: "from-yellow-500 to-orange-500"
+        },
+        {
+          icon: Target,
+          title: "Results-Driven Professional",
+          description: "Committed to delivering high-impact projects with a strong focus on quality, performance, and measurable outcomes.",
+          gradient: "from-green-500 to-emerald-500"
+        },
+        {
+          icon: Heart,
+          title: "Technology Enthusiast",
+          description: "Passionate about building meaningful, user-centric solutions that create real-world value through technology.",
+          gradient: "from-pink-500 to-rose-500"
+        }
+
   ];
 
   return (
