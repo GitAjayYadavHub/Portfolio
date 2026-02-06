@@ -92,23 +92,23 @@ const Projects = () => {
               }`}
             >
               {/* Project Image and Technologies */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              <div className={`flex flex-col h-full ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <motion.div
-                  className="relative group overflow-hidden rounded-lg"
+                  className="relative group overflow-hidden rounded-lg flex-1"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-64 lg:h-80 object-cover"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.div>
 
                 {/* Technologies Below Image */}
-                <div>
+                <div className="mt-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -121,44 +121,46 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className={`space-y-6 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                <div>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
-                  <p className="text-primary text-sm mb-2">{project.tagline}</p>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>
-                        <span className="text-gray-400 font-semibold"></span> {project.description}
+              <div className={`flex flex-col justify-between h-full ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                        {project.category}
                       </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span className="text-gray-300">
-                        <span className="text-gray-300 font-semibold">Impact:</span> {project.impact}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {project.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="text-gray-300 text-sm flex items-start">
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
+                    <p className="text-primary text-sm mb-2">{project.tagline}</p>
+                    <ul className="space-y-2 text-gray-300">
+                      <li className="flex items-start">
                         <span className="text-primary mr-2">•</span>
-                        {feature}
+                        <span>
+                          <span className="text-gray-400 font-semibold"></span> {project.description}
+                        </span>
                       </li>
-                    ))}
-                  </ul>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span className="bg-green-500/10 border border-green-500/20 rounded-md px-3 py-2 text-gray-300">
+                          <span className="font-semibold">Impact:</span> {project.impact}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {project.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="text-gray-300 text-sm flex items-start">
+                          <span className="text-primary mr-2">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 mt-6">
                   <motion.a
                     href={project.codeUrl}
                     target="_blank"
