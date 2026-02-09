@@ -16,7 +16,7 @@ const LoadingScreen = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 4.5 }}
         >
-          <span className="typing-text"><h1> Initializing Portfolio..... </h2></span>
+          <span className="typing-text"><h1> Initializing Portfolio..... </h1></span>
         </motion.div>
         
         <motion.div
