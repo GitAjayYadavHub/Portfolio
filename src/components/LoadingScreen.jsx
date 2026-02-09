@@ -16,7 +16,7 @@ const LoadingScreen = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 4.5 }}
         >
-          <span className="typing-text"><h1> Fear Is Natural But Quitting Is A Choice</h1><h2>So Train Your Mind To Stay Strong. </h2></span>
+          <span className="typing-text"><h1> Initializing Portfolio..... </h2></span>
         </motion.div>
         
         <motion.div
@@ -34,7 +34,7 @@ const LoadingScreen = () => {
                 opacity: [0.5, 1, 0.5],
               }}
               transition={{
-                duration: 1.5,
+                duration: 2.5,
                 repeat: Infinity,
                 delay: i * 0.2,
               }}
